@@ -1,0 +1,234 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /*الاول قسم*/ 
+
+  body{
+    overflow: hidden;
+  }
+  
+
+  .container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f5f8;
+  }
+
+  header{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    height: 80px;
+    z-index: 111;
+    line-height: 80px;
+
+  }
+  .contsiner_header_logo{
+     display: flex;
+     font-size: 40px;
+     font-weight: 800;
+     color:#1D59A0;
+     letter-spacing: 3px;
+     cursor: pointer;
+     text-transform: uppercase;
+  }
+  b{
+    font-size: 70px;
+    color: #707AB7;
+  }
+
+  .contsiner_logo_navItems{
+    display: flex;
+  }
+  .contsiner_logo_navItems li{
+     list-style: none;
+     margin: 0 15px;
+  }
+
+.contsiner_logo_navItems a{
+    font-size:25px;
+    color: #1D59A0;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.contsiner_logo_navItems li:hover a
+,.container_header_links a:hover{
+    color: #707AB7;
+}
+.container_header_links a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #1D59A0;
+    margin: 25px 10px;
+}
+
+
+/*ثاني قسم */
+.container_wrapper{
+  display: flex;
+  height:calc(100vh - 80px);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  overflow: hidden;
+}
+/*هي مشان الدائرة */
+.container_wrapper::before{
+  position: absolute;
+  content: '';
+  height: 600px;
+  width:600px;
+  border-radius: 50%;
+  left: -12%;
+  top: 40%;
+  background: linear-gradient(45deg , #1D59A0 ,pink);
+  animation: object1 6s linear infinite;
+}
+/* خلت العنصر يلي بدياه هوي يضهر الاول فوقه الكلام */
+.container_wrapper_cols0{
+  width: 60%;
+  z-index: 5;
+}
+
+@keyframes object1 {
+  50%{
+    left: -13%;
+    top: 43%;
+  }
+}
+
+/*هي مشان الدائرة الصغيرة*/
+.container_wrapper::after{
+  position: absolute;
+  content: '';
+  height: 200px;
+  width:200px;
+  border-radius: 50%;
+  left: 35%;
+  top: 12%;
+  background: linear-gradient(45deg , #1D59A0 ,pink);
+  animation: object2 6s linear infinite;
+}
+
+@keyframes object2 {
+  50%{
+    left:35%;
+    top: 10%;
+  }
+}
+.container_wrapper_cols{
+  width: 50%;
+}
+
+.container_wrapper_cols_topline{
+   display:block;
+   position: relative;
+   font-size: 35px;
+   letter-spacing: 5px;
+   color: #1D59A0;
+}
+
+/* هذا مشان الخط يلي جنب الهيلو*/
+.container_wrapper_cols_topline::after{
+position: absolute;
+content: '';
+height: 4px;
+width: 45px;
+bottom: 10px;
+background-color: #707AB7;
+}
+
+ .container_wrapper_cols h1{
+  display:block;
+  font-weight:900;
+  font-size: 7em;
+  color: #1D59A0;
+}
+.container_wrapper_cols_multiText{
+  color:#707AB7;
+  text-transform: capitalize;
+}
+.container_wrapper_cols p{
+  display: block;
+  width: 90%;
+  font-size: 1.2em;
+  color: #1D59A0;
+}
+.container_wrapper_cols_btns{
+width: 100%;
+position: relative;
+left:150px;
+}
+
+.container_wrapper_cols_btns button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  background-color:#1D59A0;
+  padding:  8px 14px;
+  margin: 40px 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow:0 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+.container_wrapper_cols_btns button:hover{
+  background-color: #707AB7;
+}
+/* ثالث قسم*/
+.container_wrapper_cols1_imgbox{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container_wrapper_cols1_imgbox img{
+  position:relative;
+  height: 100%;
+  width: calc(130% -80px);
+  top:-100%;
+  right: -100px;
+  bottom: -130px;
+  /* انت بسسبك حطيت اسم متغير وستخدمته */
+  animation: alternateUser 4s linear infinite; 
+}
+/* مشان الصورة تتحرك */
+@keyframes alternateUser {
+  50%{
+    right:30px;
+    top:-90px;
+  }
+}
+
+#container_wrapper_cols1_imgbox_splash{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% ,-50%) rotate(-35deg);
+  width: 160%;
+  animation: animate 4s linear infinite; 
+}
+/* مشان الصورة تتحرك */
+@keyframes animate {
+  50%{
+    top: 49%;
+    left: 51%;
+    width: 155%;
+  }
+}
+
+
+
+
