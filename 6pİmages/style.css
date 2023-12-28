@@ -1,0 +1,107 @@
+body{
+    background-color: #fad390;
+}
+
+.container{
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.image{
+    display: none;
+}
+
+#prev{
+    position: absolute;
+    top: 43%;
+    left:23.3%;
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size:  1rem;
+    border-radius: 0 5px 5px 0;
+    transition:  0.6s ease;
+   /*مشان شو */ user-select: none; 
+}
+
+#next{
+    position: absolute;
+    top: 43%;
+    right:23.3%;
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size:  1rem;
+    border-radius: 5px 0 0 5px;
+    transition:  0.6s ease;
+   /*مشان شو */ user-select: none; 
+}
+
+#prev:hover , #next:hover {
+    background-color: rgba(0, 0,0 , 0.5);
+}
+
+
+.dots{
+    text-align: center;
+    margin: 2%;
+}
+
+.dot{
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    display: inline-block;
+    border-radius: 50px;
+    margin:  0 2px;
+    transition: background-color 0.6s ease;
+
+}
+
+
+
+.active{
+    background-color: #717171;
+}
+.fade{
+
+animation: fade 1.5s;
+}
+
+
+/*فكرة جديدة وحلوة وهامة */
+/*مشان الاول ما اكبس يصير الصورة شفافة */
+
+@keyframes fade {
+    from { opacity: .4}
+    to {opacity: 1}
+    
+}
+
+
+/* مشان شاشة على تلفون */
+/*Small*/
+@media(max-width:768px){
+    .container{
+        width:100%;
+    }
+}
+/*Medium*/
+@media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+/*Large*/
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
