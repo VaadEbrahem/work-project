@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+}
+
+.registration_form {
+    background-color:  #ffb0c3;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+.registration_form .background_form {
+    background-color: #FFFFFF;
+    height: 600px;
+    width: 440px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    border-top: 1px solid #d86c8e;
+    border-left: 1px solid #d86c8e;
+    border-bottom: 1px solid #d86c8e;
+    
+}
+
+.registration_form .feat {
+    text-align: center;
+    padding: 60px 70px 40px 70px;
+
+
+}
+.registration_form .feat  h4{
+    color: #000000;
+
+}
+
+
+.registration_form .inputs_içeri {
+    padding-left: 50px;
+    width: 90%;
+}
+
+.registration_form input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #999;
+    border-radius: 1px;
+    padding-left: 43px;
+
+}
+
+.registration_form input[type="text"]:focus,
+.registration_form input[type="number"]:focus,
+.registration_form input[type="email"]:focus,
+.registration_form input[type="password"]:focus {
+    box-shadow: none;
+    outline: none;
+    border-radius: 0;
+    border-bottom: 1px solid  #d86c8e;
+}
+
+.registration_form ::placeholder {
+    font-size: 12px;
+    color: #999;
+}
+
+.registration_form .inputs_içeri {
+    position: relative;
+}
+
+.registration_form .form_icon {
+    position: absolute;
+    top: 10px;
+    color: #999;
+}
+
+
+
+
+/*مشان الزر*/
+
+.registration_form .main-btn:focus {
+    background-color:  #ffb0c3;
+    box-shadow: none;
+    outline: none;
+ 
+}
+
+
+.registration_form .main-btn {
+    border: none;
+    border-radius: 10px;
+    width: 78%;
+    background:  #ffb0c3;
+    color: #000000;
+    position: relative;
+    z-index: 0;
+    margin-left: 50px;
+    padding: 15px 0px;
+}
+
+.registration_form .main-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #d86c8e;
+    transition: .3s linear;
+    z-index: -1;
+    margin-top: 0rem;
+    border-radius: 10px;
+}
+
+.registration_form .main-btn:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.registration_form .main-btn:hover {
+    background: #d86c8e;
+    border-radius: 10px;
+}
+
+/*مشان الزر*/

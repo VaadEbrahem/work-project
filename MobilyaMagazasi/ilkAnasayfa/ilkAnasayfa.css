@@ -1,0 +1,661 @@
+        /* استيراد نمط الخط "Poppins" من Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&display=swap');
+
+        :root {
+            --background-color: #19283f;
+            --green-color: #FFD700;
+            --red-color: #ff3150;
+
+            --yollow-color: #ffc400;
+            --section-color: #eff7fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+
+        /* <!-- هي الكلمة اهلا وسهلا بكم انو تختفي  -->  */
+        .text-overlay {
+            display: none;
+            /* Remove initial hidden state */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            z-index: 4;
+            /* Place it above the black background */
+        }
+
+
+
+        /* <!-- هي الكلمة اهلا وسهلا بكم انو تختفي  -->  */
+        /*هامش السود*/
+        .banner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a;
+            opacity: 1;
+            animation: slideOut 5s ease-in-out forwards;
+            z-index: 3;
+            /* Add z-index to make sure it covers the video */
+        }
+
+        @keyframes slideOut {
+            0% {
+                transform: translate(0);
+                opacity: 0;
+                /* Start with opacity 0 */
+            }
+
+            10% {
+                opacity: 1;
+                /* Make the text visible */
+            }
+
+            90% {
+                transform: translate(-100%);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-100%);
+                opacity: 0;
+                /* Fade out at the end of animation */
+            }
+        }
+
+
+
+
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .video-container {
+            position: relative;
+            left: 0;
+            top: 0;
+            /* هذا عنصر الاب لهيك حطيت ريلاتيفي*/
+            width: 100%;
+            height: 100vh;
+            /* Set the height to viewport height */
+            /*هامش السود*/
+            overflow: hidden;
+            /*هامش السود*/
+        }
+
+
+
+
+
+        #video-bg {
+            position: absolute;
+            /*  لنك ابن حطيتك */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* يضمن أن يغطي الفيديو الحاوية بأكملها */
+        }
+
+
+
+
+
+
+
+        /* اسم متغير انا انشته  */
+        .main-btn {
+            background-color: #0f5bae;
+            color: white;
+            padding: 0.5rem 1rem;
+
+        }
+
+        .main-btn:hover {
+            background-color: #0f5bae;
+            color: white;
+        }
+
+
+        .body_video {
+            height: 100%;
+            position: relative;
+            z-index: 2;
+            /* Add z-index to make sure it's above the black screen */
+        }
+
+
+        /* لزم اعرف الاب اذا البين بده يستخدم لبلوسيليتي عرف لاب وعطيه اصفار العملية تتطلع اصل */
+
+
+
+
+        .video_logo_img {
+            width: 45%;
+            padding-bottom: 26px;
+
+        }
+
+        /*nav*/
+        .navbar {
+            width: 100%;
+            height: 80px;
+            background-color: #1a1a1a;
+            position: fixed;
+            opacity: 0.8;
+
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: white;
+            transition: 0.5s;
+        }
+
+        .navbar .navbar-nav .nav-link.active,
+        /*الاول عنوان عند كلاس اسمه اكتف راح يتلون لما ينفتح صفح هوي الوحيد ملون */
+        .navbar .navbar-nav .nav-link:focus,
+        .navbar .navbar-nav .nav-link:hover {
+            color: #FFD700;
+        }
+
+        /* <!-- nav اليقونة يلي جنب العاوين ال  --> */
+        .navbar .navbar-toggler {
+            color: white;
+            font-size: 25px;
+            border-color: white;
+        }
+
+        .navbar .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* تنسيقات الصفات يلي موجودة داخل العنصر  */
+
+        .navbar .navbar-toggler[aria-expanded="true"] {
+            border-color: #FFD700;
+
+        }
+
+        /* <!-- nav اليقونة يلي جنب العاوين ال  --> */
+        .navbar .serrch {
+            border-left: 1px solid#FFD700;
+        }
+
+        /*  بسبب الروابط يلي كتبتهم svg   الى i  مشان  هوي غير  svgحطيت  */
+        .navbar .serrch svg {
+            color: #FFD700;
+        }
+
+        /*nav*/
+
+
+
+
+
+        /*  <!-- هي صفحة ثانية  -->  */
+
+        .features .icon-holder {
+            height: 200px;
+        }
+
+        .features .icon-holder svg {
+            
+            /* نظام التوسيط  */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /*  هي مشان اليقونة يلي بالخلف  على شكل رقم واحد */
+        .features .icon-holder .number {
+            font-size: 12rem;
+            color: var(--section-color);
+        }
+
+        .features .icon-holder .icon {
+            color: var(--green-color);
+        }
+
+        .features .feat h4 {
+            color: var(--yollow-color);
+        }
+
+
+        /*  <!-- هي صفحة ثانية  -->  */
+
+
+
+        /*  انت كتير هام لو انو انا حاطتك مية بس المساحة الصفحة ما ببين فيها الصورة ببقا  */
+        .imag_left-text_right {
+            min-height: 100vh;
+        }
+
+
+
+
+
+
+
+
+        /* اسم متغير انا انشته  */
+        .main-btn1 {
+            background-color: #0f5bae;
+            color: white;
+            padding: 0.5rem 3rem;
+
+        }
+
+        .main-btn1:hover {
+            background-color: #0f5bae;
+            color: white;
+        }
+
+
+
+
+
+
+
+        .btn {
+            padding: 10px 14px;
+            background-color: #0f5bae;
+            color: #fff;
+            border-radius: 0.3rem;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: #0d4f9b;
+        }
+
+
+
+        .box {
+            position: relative;
+            box-shadow: 1px 4px 4px rgba(0, 0, 0, .1);
+            border: 1px solid none;
+        }
+
+        /* Existing CSS */
+        .box .box-img {
+            height: 400px;
+            /* Remove this height */
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .box .box-img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+
+        }
+
+        /* Modify the CSS for the card image */
+        .card .box-img img {
+            height: 100%;
+            /* Set the height to 100% */
+            width: 100%;
+            /* Set the width to 100% */
+            object-fit: contain;
+            /* Use 'contain' for object-fit to fit the image within the card */
+        }
+
+
+        .box .box-img img:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        .bottom_right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .our-work .box1 {
+            padding: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /*data-work="Application"*/
+        /*الخلفية الجاي على ازرق مغطي الصورة والكلام */
+        .our-work .box1::before {
+            content: attr(data-work);
+            position: absolute;
+            background-color: rgb(13 77 155 / 76%);
+            width: calc(100% - 10px);
+
+            /* 13 77 155 */
+            /* rgb(255, 211, 0) */
+            /* هي ال عشرة اجت من الحواف البيض  انا ما بدي يسكر عليهم كمان لهيك*/
+            /*خمسي يمين خمسي يسار لهيك سارت عشرة */
+            height: calc(100% - 10px);
+            /* كلاحظة هامة انو السالب ما لزم يلزق بي العدد*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+            /* راح يخلي الحركة ناعمة */
+            font-size: 1.5rem;
+            /* نخبي العنصر برا الشاشة*/
+            transform: translateY(calc(-100% - 5px));
+
+        }
+
+        .our-work .box1:hover:before {
+            transform: translateY(0);
+            /*الحركة من جهة اليسار من الكسات بس لما لمس بيعمل تغير */
+            /*translateX*/
+            /*translateY */
+            /*الحركة من جهة الوايات من فوق التاثير*/
+        }
+
+
+
+
+
+
+
+
+        .title_left {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+
+
+        .box3 {
+            position: relative;
+            box-shadow: 1px 4px 4px rgba(0, 0, 0, .1);
+            border: 1px solid none;
+        }
+
+
+
+        .box3 .box-img1 img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+
+        }
+
+        /* Modify the CSS for the card image */
+        .card .box-img1 img {
+            height: 100%;
+            /* Set the height to 100% */
+            width: 100%;
+            /* Set the width to 100% */
+            object-fit: contain;
+            /* Use 'contain' for object-fit to fit the image within the card */
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* تصميم الصفحة الرئيسية */
+        .sada_images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #e7dfd2;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        /* تحديد أقصى عرض للعناصر داخل العنصر ذو الفئة ".container" */
+        .container1 {
+            max-width: 1200px;
+            width: 95%;
+        }
+
+        /* تصميم عناصر السلايدر */
+        .slider-wrapper {
+            position: relative;
+        }
+
+        .slider-wrapper .slide-button {
+            position: absolute;
+            top: 50%;
+            outline: none;
+            border: none;
+            height: 50px;
+            width: 50px;
+            z-index: 5;
+            color: #fff;
+            display: flex;
+            cursor: pointer;
+            font-size: 2.2rem;
+            background: #0d4f9b;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .slider-wrapper .slide-button:hover {
+            background: #0d4f9b;
+        }
+
+        /* تحديد موقع زر السابق في السلايدر */
+        .slider-wrapper .slide-button#prev-slide {
+            left: -25px;
+        }
+
+        /* تحديد موقع زر التالي في السلايدر */
+        .slider-wrapper .slide-button#next-slide {
+            right: -25px;
+        }
+
+        /* تصميم قائمة الصور في السلايدر */
+        .slider-wrapper .image-list {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 18px;
+            font-size: 0;
+            list-style: none;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        /* إخفاء شريط التمرير الافتراضي للمتصفح */
+        .slider-wrapper .image-list::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* تصميم عناصر الصور في السلايدر */
+        .slider-wrapper .image-list .image-item {
+            width: 325px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* تصميم شريط التمرير العمودي */
+        .container1 .slider-scrollbar {
+            height: 24px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-scrollbar .scrollbar-track {
+            background: #ccc;
+            width: 100%;
+            height: 2px;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .slider-scrollbar:hover .scrollbar-track {
+            height: 4px;
+        }
+
+        .slider-scrollbar .scrollbar-thumb {
+            position: absolute;
+            background: #0d4f9b;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            cursor: grab;
+            border-radius: inherit;
+        }
+
+        .slider-scrollbar .scrollbar-thumb:active {
+            cursor: grabbing;
+            height: 8px;
+            top: -2px;
+        }
+
+        .slider-scrollbar .scrollbar-thumb::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -10px;
+            bottom: -10px;
+        }
+
+        /* أنماط خاصة للأجهزة المحمولة والأجهزة اللوحية */
+        @media only screen and (max-width: 1023px) {
+
+            /* إخفاء زر السابق وتعديل أحجام الصور وشريط التمرير */
+            .slider-wrapper .slide-button {
+                display: none !important;
+            }
+
+            .slider-wrapper .image-list {
+                gap: 10px;
+                margin-bottom: 15px;
+                scroll-snap-type: x mandatory;
+            }
+
+            .slider-wrapper .image-list .image-item {
+                width: 280px;
+                height: 380px;
+            }
+
+            .slider-scrollbar .scrollbar-thumb {
+                width: 20%;
+            }
+        }
+
+
+
+        /* مشان اقدر اعمل الخط يلي تحت الصورة  */
+        .main-title::after {
+            content: '';
+            width: 120px;
+            height: 2px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -20px;
+            /* نظام التوسيط  */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .bottom_right .text_image {
+            color: #1a1a1a;
+        }
+
+        /* <!-- الصفحة الخامسة  --> */
+        .team {
+            background-color: #e7dfd2;
+        }
+
+        .team h2 {
+            color: #1a1a1a;
+        }
+
+        .team .box h5 {
+            background-color: #0d4f9b;
+        }
+
+        .b {
+            position: absolute;
+            left: 8px;
+            bottom: 5px;
+            padding: 7px 7px;
+        }
+
+        .b:hover {
+            background-color: #0d4f9b;
+        }
+
+        /* <!-- الصفحة الخامسة  --> */

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.registration_form {
+    background-color: #B0E0E6;
+    min-height: 100vh;
+    position: relative;
+}
+
+.registration_form .background_form {
+    background-color: #fff;
+    height: 600px;
+    width: 440px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+/*المكان بنحطيه الديف يلي محتويها */
+.registration_form .feat {
+    text-align: center;
+    padding: 60px 70px 40px 70px;
+
+
+}
+
+/* الفعال يلي راح ياخذها العنصر نفسه بتعطيه لحالها */
+
+
+.registration_form .inputs_içeri {
+    padding-left: 50px;
+    width: 90%;
+}
+
+.registration_form input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #999;
+    border-radius: 1px;
+    /*مو المستطيل هوي شكل دائرة ما بدك ياها هيك بتعملي */
+    padding-left: 43px;
+    /*هي مشان البوردر من اليمين بس هوي من عنده بنكتب  داخل الينبوت بعتته */
+}
+
+/*انتي يلي من خلالك اوامر ال سي اسس اس بالبوتستراب بقدر اشيلها */
+.registration_form input[type="text"]:focus,
+.registration_form input[type="number"]:focus,
+.registration_form input[type="email"]:focus,
+.registration_form input[type="password"]:focus {
+    box-shadow: none;
+    outline: none;
+    border-radius: 0;
+    /* إزالة تدوير الحدود واستخدام الزوايا الافتراضية */
+    border-bottom: 1px solid #B0E0E6;
+    
+}
+
+
+
+
+/*مشان الكلام يلي بكون بالمستطيل غيرت فيه */
+.registration_form ::placeholder {
+    font-size: 12px;
+    color: #999;
+}
+
+.registration_form .inputs_içeri {
+    position: relative;
+}
+
+.registration_form .form_icon {
+    position: absolute;
+    top: 10px;
+    color: #999;
+}
+
+
+
+
+/*مشان الزر*/
+
+.registration_form .main-btn:focus {
+    /*مو المستطيل هوي شكل دائرة ما بدك ياها هيك بتعملي */
+    background-color: #B0E0E6;
+    box-shadow: none;
+    outline: none;
+    border-radius: 0;
+    border-radius: 10px;
+}
+
+.registration_form .main-btn {
+    border: none;
+    /*مو المستطيل هوي شكل دائرة ما بدك ياها هيك بتعملي */
+    border-radius: 1px;
+    /*مو المستطيل هوي شكل دائرة ما بدك ياها هيك بتعملي */
+    width: 78%;
+    background: #B0E0E6;
+    color: #000000;
+    position: relative;
+    z-index: 0;
+    margin-left: 50px;
+    padding: 15px 0px;
+    border-radius: 10px;
+}
+
+.registration_form .main-btn::before {
+    content: '';
+    position: absolute;
+   
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #63C1CF;
+    transition: .3s linear;
+    z-index: -1;
+    margin-top: 0rem;
+    border-radius: 10px;
+}
+
+.registration_form .main-btn:hover::before {
+    width: 100%;
+    left: 0;
+    border-radius: 10px;
+}
+
+.registration_form .main-btn:hover {
+    background: #63C1CF;
+    border-radius: 10px;
+}
+
+/*مشان الزر*/
+
+.registration_form .form_span {
+    color: #999;
+    font-size: 13px;
+}
+
+.image_form {
+    position: absolute;
+    bottom: 1px;
+}
